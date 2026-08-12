@@ -1,0 +1,8 @@
+{
+  "name": "catalogiq-ai",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix frontend run build",
+    "test:frontend": "npm --prefix frontend test"
+  }
+}

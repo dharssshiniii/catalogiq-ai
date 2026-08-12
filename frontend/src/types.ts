@@ -1,0 +1,5 @@
+export type Page='overview'|'profile'|'sources'|'review'|'jobs'|'quality'
+export type Field={id?:number;field_name:string;original_value:string|null;generated_value:string|null;evidence:{excerpt:string;source_identifier:string;extraction_method:string;page_number?:number|null;url?:string|null}[];confidence:number;validation_status:string;review_status:string;reason_codes?:string[];candidates?:{value:string;source:string;confidence:number}[]}
+export type Enrichment={product_key:string;mode:string;fields:Field[];validation_issues:{field_name:string|null;severity:string;code:string;message:string}[];review_status:string;commerce_record:Record<string,string>}
+export type Profile={filename:string;row_count:number;columns:string[];missing_placeholder_counts:Record<string,number>;placeholder_count:number;duplicate_count:number;duplicate_counts:{manufacturer_part_number:number;description:number;full_row:number};processing_duration_ms:number;unique_manufacturers:string[];quality_summary:{completeness_ratio:number;rows_needing_attention:number}}
+export type PersistedProduct={id:number;manufacturer_part_number:string;review_status:string;fields:Field[]}

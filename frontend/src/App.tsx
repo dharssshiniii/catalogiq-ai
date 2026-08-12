@@ -1,0 +1,10 @@
+import {useState} from 'react'
+import {Shell} from './components/Shell'
+import {Overview} from './pages/Overview'
+import {Profile} from './pages/Profile'
+import {Quality} from './pages/Quality'
+import {Review} from './pages/Review'
+import {Sources} from './pages/Sources'
+import {Jobs} from './pages/Jobs'
+import type {Page} from './types'
+export default function App(){const [page,setPage]=useState<Page>('overview');return <Shell page={page} setPage={setPage}>{page==='overview'?<Overview go={setPage}/>:page==='profile'?<Profile/>:page==='sources'?<Sources/>:page==='review'?<Review/>:page==='jobs'?<Jobs/>:<Quality/>}</Shell>}

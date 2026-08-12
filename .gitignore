@@ -1,0 +1,25 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.db
+*.sqlite3
+node_modules/
+frontend/dist/
+frontend/coverage/
+test-results/
+playwright-report/
+*.log
+*.error.log
+*.tsbuildinfo
+.vercel/
+.coverage
+htmlcov/
+.DS_Store
+Thumbs.db
+data/raw/*
+!data/raw/.gitkeep
+Unihack_ Sample Dataset - Input.csv
+Unihack_ Expected Output - Delivery Format.csv
+*.pptx
